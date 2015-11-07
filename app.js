@@ -1,8 +1,11 @@
 //Instanciation de Socket.io
-var express = require('express');
+
+var express = require('express')
+  , http = require('http');
+
 var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var server = app.listen(8080);
+var io = require('socket.io').listen(server);
 var swig  = require('swig');
 
 
@@ -14,20 +17,20 @@ swig.setDefaults({ cache: false });
 
 //Vérification bon fonctionnement réception
 io.sockets.on('connection', function (socket) {
-	socket.on('mouse_position', function (message) {
-		console.log('X: ' + message.mx + '/ Largeur ' + message.maxX);
+	socket.on('box_selected', function (message) {
+		console.log('test');
+		socket.broadcast.emit('show_box', message);
 	});	
 });
 
 app.use('/assets', express.static(__dirname + '/assets'));
 
 
-http.listen(8080, function(){
-  console.log('En attente sur *:3000');
-});
+
 
 //Page "télécommande"
 
 app.get('/remote', function(req, res){
   	res.render('remote');
 });
+
