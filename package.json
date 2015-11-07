@@ -1,0 +1,14 @@
+{
+  "name": "ouvre-boites",
+  "description": "Projet Ouvre-Boites dans le cadre de Museomix MTL 2015",
+  "version": "0.0.1",
+  "dependencies": {
+    "socket.io": "*",
+    "express" : "*",
+    "swig" : "*"
+  },
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/npm/npm.git"
+  }
+}
