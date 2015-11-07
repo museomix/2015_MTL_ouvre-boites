@@ -1,5 +1,9 @@
-#boxes img {
-	width:15%;
+#boxes {
+	width:100%;
+}
+#boxes img, #boxes .svg {
+	width:20% !important;
+	
 }
 body#black {
 	background: Black;

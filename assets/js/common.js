@@ -12,3 +12,6 @@ var pointerEventToXY = function(e){
       }
       return out;
     };
+$(document).ready(function() {
+  //$('.svg').inlineSVG();
+})
