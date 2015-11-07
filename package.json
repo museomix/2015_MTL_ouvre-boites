@@ -5,7 +5,10 @@
   "dependencies": {
     "socket.io": "*",
     "express" : "*",
-    "swig" : "*"
+    "swig" : "*",
+    "csv" : "*",
+    "csv-parse" : "*",
+    "should" : "*"
   },
   "repository" :
   { "type" : "git"

@@ -11,12 +11,14 @@
 </head>
 
 <body id="">
+<div id="coords"></div>
 <div id="boxes">
-	<img src="assets/box.svg" class="svg" alt="">
-	<img src="assets/box.svg" class="svg" alt="">
-	<img src="assets/box.svg" class="svg" alt="">
-	<img src="assets/box.svg" class="svg" alt="">
-	<img src="assets/box.svg" class="svg" alt="">
+{% for box in boxes %}
+	<div class="box" data-box_name="{{ box.name }}"  data-photo_url="{{ box.photo_url }}" 
+	data-content_type="{{ box.content_type }}" data-content="{{ box.content }}">
+		<img src="assets/box.svg" class="svg" />
+  </div>
+{% endfor %}
 		
 
 	</div>
@@ -24,6 +26,8 @@
 <script src="assets/js/socket.io.js"></script>
 <script src="assets/js/common.js"></script>
 <script src="assets/js/remote.js"></script>
+<script src="assets/js/jquery.inlinesvg.min.js"></script>
+
 
 </body>
 </html>

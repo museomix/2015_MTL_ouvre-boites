@@ -1,10 +1,41 @@
 #boxes {
 	width:100%;
 }
-#boxes img, #boxes .svg {
+#boxes .box {
 	width:20% !important;
+	padding:0;
+	margin:0;
+	display:inline-block;
 	
 }
+.box svg {
+	width:100%;
+	height:190px;
+}
+.box 
 body#black {
 	background: Black;
+}
+.box img {
+	display:block;
+	width:100%;
+}
+.box .box_name {
+	float:left;
+}
+#screen {
+	height:800px;
+	width:100%;
+}
+#screen_display {
+	background:Black;
+}
+#screen_display #screen {
+	width:90%;
+	height:90%;
+	margin:auto;
+}
+#screen iframe {
+	width:100%;
+	height:768px;
 }
