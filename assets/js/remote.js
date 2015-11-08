@@ -18,6 +18,11 @@ $(document).ready(function() {
         }
         );
     });
+    if ($('body').hasClass('projector')) {
+        socket.on('blank_video', function(content) {
+            document.location.reload();
+          });
+    }
 
     socket.on('show_box', function(index) {
         $('.box').css('background-color','').removeClass('selected').addClass('not_selected');
