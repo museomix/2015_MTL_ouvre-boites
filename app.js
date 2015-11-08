@@ -15,6 +15,7 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/templates');
 app.set('view cache', false);
 swig.setDefaults({ cache: false });
+var playing = false;
 
 //Vérification bon fonctionnement réception
 io.sockets.on('connection', function (socket) {
@@ -29,10 +30,16 @@ io.sockets.on('connection', function (socket) {
 	socket.on('play_video', function (message) {
 		console.log('play');
 		socket.broadcast.emit('launch_video', message);
+		playing = true;
 	});
-	socket.on('empty_video', function (message) {
-		console.log('play');
-		socket.broadcast.emit('blank_video', message);
+	socket.on('no_video', function (message) {
+		console.log('empty');
+		if (playing) {
+			console.log('blank');
+
+			socket.broadcast.emit('blank_video', message);
+			playing = false;
+		}
 	});	
 });
 
