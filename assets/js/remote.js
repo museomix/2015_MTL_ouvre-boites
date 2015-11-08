@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     //Sélection des boites
 	$('.box').click(function () {
-        socket.emit('box_selected', $('.svg').index($(this)));
+        socket.emit('box_selected', $('.box').index($(this)));
         socket.emit('box_content', 
         {
         	content_type : $(this).data('content_type'),
@@ -27,10 +27,19 @@ $(document).ready(function() {
     	 	allAfter: function () {
             $('.box').each(function() {
     			$(this).find('text').text($(this).data('box_name'));
-    			$(this).find('image').attr('xlink:href', $(this).data('photo_url'));
+    			$(this).find('image').attr('xlink:href', '/assets/img/photos/' + $(this).data('photo_url'));
     		});
         },
 	});
+    $('svg').each(function() {
+        $(this).find('text').eq(0).text($(this).parent().data('box_name'));
+        $(this).find('text').eq(1).text($(this).parent().data('box_year'));
+        $(this).find('text').eq(2).text($(this).parent().data('box_job'));
+        $(this).find('text').eq(2).hide();
+        $(this).find('image').attr('xlink:href', '/assets/img/photos/' + $(this).parent().data('photo_url'));
+
+    });
+    
 
     //Gestion du gyroscope
 	var alpha = 0;
@@ -42,18 +51,24 @@ $(document).ready(function() {
     window.ondeviceorientation = function(event) {
             alpha = Math.round(event.alpha);
             beta = Math.round(event.beta);
+            previousGamma = gamma;
             gamma = Math.round(event.gamma);
     }   
                 
     //Gestion de l'inclinaison
+    var playing = false;
     setInterval(function() {
         $('#coords').html('Alpha : ' + alpha + ' / Beta : ' + beta + ' / Gamma ' + gamma)
-        if (gamma > 2)
+        if (gamma > 10)
         {
             socket.emit('play_video');
+            playing = true;
         }
-        if (gamma == 0) {
-            socket.emit('empty_video');
+        //console.log('gamma = ' + gamma + ' / previous : ' + previousGamma);
+        if ((gamma < 10) && (playing)) {
+            console.log('gamma ' + gamma);
+            playing = false;
+            socket.emit('no_video');
         }
 
     }, checkDelay);
