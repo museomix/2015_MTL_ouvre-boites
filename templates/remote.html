@@ -12,7 +12,7 @@
 
 </head>
 
-<body id="black">
+<body id="black" {% if projector %} class="projector" {% endif %}>
 <div id="coords"></div>
 <div id="boxes">
 {% for box in boxes %}
@@ -34,7 +34,7 @@
 	<text transform="matrix(1 0 0 1 350.0347 405.5801)" font-family="'Arial'" font-size="48">2015</text>
 	<text  transform="matrix(1 0 0 1 371.0347 400.5801)" font-family="'ArialMT'" font-style="italic" font-size="30">2015</text>
 	
-		<image overflow="visible" width="200" height="200" xlink:href="../assets/img/fake.jpg"  transform="matrix(1.0 0 0 1 136.3452 240.5518)">
+		<image overflow="visible" width="200" height="200" xlink:href=""  transform="matrix(1.0 0 0 1 136.3452 240.5518)">
 	</image>
 </g>
 </svg>

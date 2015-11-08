@@ -58,7 +58,8 @@ app.get('/remote', function(req, res){
 	var parser = parse({delimiter: ';', columns : true}, function(err, data){
 		boxes = data;
 		res.render('remote', {
-		boxes : boxes
+		boxes : boxes,
+		projector : (req.query.projector == 1 ? true : false)
 	});
 	  
 	});
