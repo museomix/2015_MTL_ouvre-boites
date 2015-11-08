@@ -1,9 +1,13 @@
-name;photo_url;start_date;job;content_type;content
-Samy;http://www.arles-antique.cg13.fr/museomix/_imgs/pmm.jpg;2015-11-07;developer;youtube;B6Ptl_LL0i4
-Samy2;http://www.arles-antique.cg13.fr/museomix/_imgs/pmm.jpg;2015-11-07;developer;youtube;B6Ptl_LL0i4
-Samy;http://www.arles-antique.cg13.fr/museomix/_imgs/pmm.jpg;2015-11-07;developer;youtube;B6Ptl_LL0i4
-Samy2;http://www.arles-antique.cg13.fr/museomix/_imgs/pmm.jpg;2015-11-07;developer;youtube;B6Ptl_LL0i4
-Samy;http://www.arles-antique.cg13.fr/museomix/_imgs/pmm.jpg;2015-11-07;developer;youtube;B6Ptl_LL0i4
-Samy2;http://www.arles-antique.cg13.fr/museomix/_imgs/pmm.jpg;2015-11-07;developer;youtube;B6Ptl_LL0i4
-Samy;http://www.arles-antique.cg13.fr/museomix/_imgs/pmm.jpg;2015-11-07;developer;youtube;B6Ptl_LL0i4
-Samy2;http://www.arles-antique.cg13.fr/museomix/_imgs/pmm.jpg;2015-11-07;developer;youtube;B6Ptl_LL0i4
+name;photo_url;year;job;content_type;content
+Alexandre P.;alex_p.jpg;2004;Audiovisuel;image;alex_p.jpg
+Dalouny P.;dalouny_p.jpg;2014;Boutique;image;dalouny_p.jpg
+Gabriel L.S.;gabriel_ls.jpg;2014;Services techniques;image;gabriel_ls.jpg
+Geneviève M.L.;genevieve_ml.jpg;2014;Accueil;youtube;LaMqhPASfJo
+Julie B.;julie_b.jpg;2015;Action culturelle;image;julie_b.jpg
+Marielle A.;marielle_a.jpg;2005;Services au visiteur;image;marielle_a.jpg
+Reda S.;reda_s.jpg;2014;Salles;youtube;B2gkBoOYr2w
+Samuel D.;samuel_d.jpg;2015;Accueil;image;samuel_d.jpg
+Sandra E.;sandra_e.jpg;2012;Médiation;image;sandra_e.jpg
+Sandrine M.L.;sandrine_ml.jpg;2013;Services au visiteur;image;sandrine_ml.jpg
+Steve C.;steve_c.jpg;2011;Boutique;image;steve_c.jpg
+Véronique L.;veronique_l.jpg;1995;Médiation;image;veronique_l.jpg
