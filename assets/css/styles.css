@@ -10,6 +10,40 @@
 	opacity:1;
 	
 }
+.box {
+}
+.box .box_job, .box .box_advice {
+	display:none;
+}
+.box.selected .box_job,  .box.selected .box_advice {
+	display:block;
+}
+.box_advice {
+	    color: white;
+    fill: white;
+    font-weight: normal;
+}
+.box.selected svg{
+	position:absolute;
+	width:700px !important;
+	height:400px !important;
+
+}
+#lightbox {
+	position:absolute;
+	background-color: rgba(0,0,0, 0.50);
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+}
+
+body.projector #boxes .box {
+	opacity:1;
+}
+body.projector #boxes .box.not_selected {
+	
+}
 .box svg {
 	width:100%;
 	height:190px;
