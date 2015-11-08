@@ -21,16 +21,6 @@ $(document).ready(function() {
         );
     });
 
-    //Passage en inline des SVG pour les rendre dynamiques
-	$('.svg').inlineSVG(
-    	{
-    	 	allAfter: function () {
-            $('.box').each(function() {
-    			$(this).find('text').text($(this).data('box_name'));
-    			$(this).find('image').attr('xlink:href', '/assets/img/photos/' + $(this).data('photo_url'));
-    		});
-        },
-	});
     $('svg').each(function() {
         $(this).find('text').eq(0).text($(this).parent().data('box_name'));
         $(this).find('text').eq(1).text($(this).parent().data('box_year'));
@@ -58,15 +48,12 @@ $(document).ready(function() {
     //Gestion de l'inclinaison
     var playing = false;
     setInterval(function() {
-        $('#coords').html('Alpha : ' + alpha + ' / Beta : ' + beta + ' / Gamma ' + gamma)
         if (gamma > 10)
         {
             socket.emit('play_video');
             playing = true;
         }
-        //console.log('gamma = ' + gamma + ' / previous : ' + previousGamma);
         if ((gamma < 10) && (playing)) {
-            console.log('gamma ' + gamma);
             playing = false;
             socket.emit('no_video');
         }
